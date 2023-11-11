@@ -13,8 +13,19 @@
 <div class="model-container"> 
   <model-viewer 
       src="Giraffe2.glb"
-      src="Soffa.glb"
       alt="Giraffe" 
+      auto-rotate 
+      camera-controls 
+      ar 
+      ar-modes="webxr scene-viewer quick-look" 
+      ar-scale="auto"
+      scale="0.9 0.9 0.9"
+      shadow-intensity="1"
+      ar-placement="floor"
+      camera-orbit="0deg 90deg 3m">
+      <button id="ar-button" slot="ar-button">Visa i AR</button>
+      src="Soffa.glb"
+      alt="Soffa" 
       auto-rotate 
       camera-controls 
       ar 
