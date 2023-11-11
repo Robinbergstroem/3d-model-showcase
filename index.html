@@ -12,9 +12,8 @@
 <body>
 <div class="model-container"> 
   <model-viewer 
-      src="Giraffe2.glb"
-      src="Soffa.glb"
-      alt="Giraffe" 
+      id="model-viewer"
+      alt="Model" 
       auto-rotate 
       camera-controls 
       ar 
@@ -26,6 +25,17 @@
       camera-orbit="0deg 90deg 3m">
       <button id="ar-button" slot="ar-button">Visa i AR</button>
   </model-viewer>
+  <div>
+    <button onclick="changeModel('Giraffe2.glb')">Giraffe</button>
+    <button onclick="changeModel('Soffa.glb')">Soffa</button>
+  </div>
 </div>
+
+<script>
+  function changeModel(modelSrc) {
+    const modelViewer = document.getElementById('model-viewer');
+    modelViewer.setAttribute('src', modelSrc);
+  }
+</script>
 </body>
 </html>
